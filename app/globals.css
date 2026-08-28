@@ -156,38 +156,42 @@ nav{display:flex;align-items:center;justify-content:space-between;max-width:var(
 .stack{position:relative;z-index:3;width:100%;max-width:var(--maxw);display:flex;flex-direction:column;align-items:center}
 
 /* ============ SLIDE 3 — WHY CHOOSE US ============
-   Solid white panels — no photos. Each card is a flex column so the number,
-   icon, heading and copy stack with even rhythm and all three cards match
-   height regardless of how long their text runs. */
+   No photos — icon, number, heading and copy in a flex column so all three
+   cards match height. Colours are the site's original navy-glass palette
+   (--glassnavy surface, green-tinted border, white heading, #c2cfda copy). */
 .cards{position:relative;z-index:3;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:var(--maxw);width:100%;margin-top:30px;align-items:stretch}
-.whycard{position:relative;display:flex;flex-direction:column;height:100%;background:#fff;border-radius:22px;
- padding:30px 30px 34px;border-top:4px solid var(--teal-500);
- box-shadow:0 26px 58px -20px rgba(4,20,38,.55);
- transition:transform .28s cubic-bezier(.2,.7,.3,1),box-shadow .28s}
-.whycard:nth-child(2){border-top-color:var(--navy-700)}
-.whycard:nth-child(3){border-top-color:var(--emerald-500)}
+.whycard{position:relative;display:flex;flex-direction:column;height:100%;border-radius:18px;
+ background:var(--glassnavy);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+ padding:30px 30px 34px;border:1px solid rgba(46,204,113,.28);overflow:hidden;
+ box-shadow:0 24px 60px -18px rgba(4,20,38,.8),inset 0 1px 0 rgba(255,255,255,.2);
+ transition:transform .28s cubic-bezier(.2,.7,.3,1),box-shadow .28s,border-color .28s}
+/* top accent in the original green→teal gradient */
+.whycard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+ background:linear-gradient(90deg,var(--green-l),var(--teal));opacity:0;transition:.28s}
+.whycard:hover::before{opacity:1}
 /* Extra specificity so the lift beats .rv.in{transform:none}, which is
    declared later in this file and would otherwise cancel it. */
-.cards .whycard:hover{transform:translateY(-6px);box-shadow:0 36px 74px -20px rgba(4,20,38,.62)}
-.whycard .num{font-size:.82rem;font-weight:800;letter-spacing:.1em;color:var(--muted)}
+.cards .whycard:hover{transform:translateY(-6px);border-color:rgba(46,204,113,.65);
+ box-shadow:0 30px 66px -18px rgba(4,20,38,.85),0 0 0 1px rgba(46,204,113,.3)}
+.whycard .num{font-size:.72rem;font-weight:800;letter-spacing:.12em;color:#7fe4ff}
 .whycard .ic{width:56px;height:56px;margin-top:18px;border-radius:16px;display:grid;place-items:center;flex:none;
- background:var(--teal-100);color:var(--teal-700)}
-.whycard:nth-child(2) .ic{background:var(--surface-2);color:var(--navy-700)}
-.whycard:nth-child(3) .ic{background:var(--emerald-100);color:var(--emerald-600)}
-.whycard h3{margin-top:20px;font-size:1.22rem;color:var(--ink);line-height:1.25}
-.whycard p{margin-top:11px;color:var(--body-text);font-size:.94rem;font-weight:500;line-height:1.75}
+ background:rgba(46,204,113,.14);border:1px solid rgba(46,204,113,.3);color:var(--green-l)}
+.whycard h3{margin-top:20px;font-size:1.22rem;color:#fff;line-height:1.25}
+.whycard p{margin-top:11px;color:#c2cfda;font-size:.94rem;font-weight:500;line-height:1.75}
 
-/* ============ SLIDE 4 — SERVICES (white photo cards) ============
+/* ============ SLIDE 4 — SERVICES (navy-glass photo cards) ============
    Flex column: fixed photo strip on top, body grows to fill, and the
    "View details" link is pushed to the bottom edge by margin-top:auto so
-   every card in the row lines up and the copy gets room to breathe. */
+   every card in the row lines up and the copy gets room to breathe.
+   Colours are the site's original navy-glass palette. */
 .svgrid{position:relative;z-index:3;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:var(--maxw);width:100%;margin-top:24px;align-items:stretch}
-.svc{position:relative;display:flex;flex-direction:column;height:100%;background:#fff;
- border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.55);
- box-shadow:0 26px 58px -20px rgba(4,20,38,.6);
+.svc{position:relative;display:flex;flex-direction:column;height:100%;
+ background:var(--glassnavy);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+ border-radius:18px;overflow:hidden;border:1px solid rgba(46,204,113,.28);
+ box-shadow:0 24px 60px -18px rgba(4,20,38,.8),inset 0 1px 0 rgba(255,255,255,.2);
  transition:transform .28s cubic-bezier(.2,.7,.3,1),box-shadow .28s,border-color .28s}
 /* Extra specificity so the lift beats .rv.in{transform:none} (declared later). */
-.svgrid .svc:hover{transform:translateY(-6px);border-color:var(--green-l);box-shadow:0 36px 74px -20px rgba(4,20,38,.7),0 0 0 1px rgba(46,204,113,.35)}
+.svgrid .svc:hover{transform:translateY(-6px);border-color:rgba(46,204,113,.65);box-shadow:0 30px 66px -18px rgba(4,20,38,.85),0 0 0 1px rgba(46,204,113,.3)}
 .svc .bar{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green-l),var(--teal));opacity:0;transition:.28s;z-index:3}
 .svc:hover .bar{opacity:1}
 .svc .ph{height:158px;position:relative;overflow:hidden;flex:none}
@@ -196,11 +200,11 @@ nav{display:flex;align-items:center;justify-content:space-between;max-width:var(
 .svc .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(5,18,24,.55))}
 .svc .no{position:absolute;left:16px;bottom:11px;z-index:2;font-weight:800;font-size:.72rem;letter-spacing:.12em;color:#7fe4ff}
 .svc .bd{flex:1 1 auto;display:flex;flex-direction:column;padding:24px 26px 26px}
-.svc h3{font-size:1.12rem;color:var(--ink);line-height:1.3}
-.svc p{color:var(--body-text);font-size:.92rem;margin-top:11px;font-weight:500;line-height:1.7}
+.svc h3{font-size:1.12rem;color:#fff;line-height:1.3}
+.svc p{color:#c2cfda;font-size:.92rem;margin-top:11px;font-weight:500;line-height:1.7}
 .svc .more{margin-top:auto;padding-top:20px;display:inline-flex;align-items:center;gap:7px;
- font-weight:800;font-size:.86rem;color:var(--teal-700);transition:gap .2s ease,color .2s ease}
-.svc:hover .more{gap:12px;color:var(--teal-600)}
+ font-weight:800;font-size:.86rem;color:#7fe4ff;transition:gap .2s ease,color .2s ease}
+.svc:hover .more{gap:12px;color:var(--green-l)}
 
 /* Why-Us / Services cards keep their light surfaces in dark mode, matching the
    rest of the home page, which does not switch themes. */
@@ -740,7 +744,9 @@ section .wrap,section .stack{width:100%}
   --surface:#FFFFFF; --surface-2:#EBF5F7; --muted:#7C97A1; --body-text:#4A606B;
 }
 /* ---- Footer + presence map — unified across every page, home included ---- */
-.sitefooter{background:var(--teal-500);color:rgba(255,255,255,.92);padding:50px 0 23px}
+/* Original navy→teal gradient footer (colour only — the 4-column layout and
+   scaled-down sizing below are kept). */
+.sitefooter{background:linear-gradient(120deg,#083352,#0a4f74 60%,#0c6b6a);color:#cfe6ef;padding:50px 0 23px}
 .sitefooter .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1.5fr 1.3fr;column-gap:36px;row-gap:20px;max-width:1240px;margin:0 auto;padding:0 28px;align-items:start}
 .sitefooter .fgrid > div:nth-child(1){grid-column:1}
 .sitefooter .fgrid > div:nth-child(2){grid-column:2}
@@ -750,7 +756,7 @@ section .wrap,section .stack{width:100%}
 .sitefooter p,.sitefooter li{font-size:.855rem;font-weight:500;line-height:1.85}
 .sitefooter ul{list-style:none}
 .sitefooter a:hover{color:#2ecc71}
-.sitefooter .fcopy{grid-column:1 / span 3;max-width:none;margin:0;border-top:1px solid rgba(255,255,255,.2);padding-top:20px;text-align:left;font-size:.77rem;color:rgba(255,255,255,.65)}
+.sitefooter .fcopy{grid-column:1 / span 3;max-width:none;margin:0;border-top:1px solid rgba(255,255,255,.2);padding-top:20px;text-align:left;font-size:.77rem}
 .sitefooter .fmap,
 .v2-scope .sitefooter .fmap{max-width:243px}
 .sitefooter .fmap-cta,
@@ -780,9 +786,9 @@ section .wrap,section .stack{width:100%}
   position:relative;transform:rotate(-45deg);box-shadow:0 2px 6px -1px rgba(0,0,0,.45)}
 .fmap-dot::before{content:"";position:absolute;top:50%;left:50%;width:4px;height:4px;border-radius:50%;background:#fff;transform:translate(-50%,-50%)}
 .fmap-pin b{font-size:.62rem;font-weight:700;color:#fff;white-space:nowrap;letter-spacing:-.01em;margin-bottom:1px}
-.fmap-cta{display:inline-block;margin-top:8px;font-size:.86rem;font-weight:700;color:#B9C8D6;transition:.2s}
+.fmap-cta{display:inline-block;margin-top:8px;font-size:.86rem;font-weight:700;color:#cfe6ef;transition:.2s}
 .fmap:hover .fmap-in img{opacity:.8}
-.fmap:hover .fmap-cta{color:var(--teal-300)}
+.fmap:hover .fmap-cta{color:var(--green-l)}
 .fmap:hover .fmap-dot{background:#fff;border-color:var(--red-500)}
 .fmap:hover .fmap-dot::before{background:var(--red-500)}
 /* ===========================================================================
@@ -1063,8 +1069,8 @@ html {scroll-behavior:smooth}
 .v2-scope .ctaband .glass .rule {background:linear-gradient(90deg,var(--teal-500),var(--emerald-500))}
 .v2-scope .ctaband footer {margin-top:0}
 .v2-scope footer {position:relative;z-index:3;width:100vw;margin:26px calc(50% - 50vw) 0;
- background:var(--teal-500);
- border-top:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.92);padding:60px 0 26px}
+ background:linear-gradient(120deg,#083352,#0a4f74 60%,#0c6b6a);
+ border-top:1px solid rgba(255,255,255,.2);color:#cfe6ef;padding:60px 0 26px}
 
 .v2-scope .fgrid {display:grid;grid-template-columns:1.4fr 1fr 1.5fr 1.3fr;column-gap:40px;row-gap:22px;align-items:start}
 
@@ -1076,7 +1082,7 @@ html {scroll-behavior:smooth}
 .v2-scope footer p,
 .v2-scope footer li {font-size:.94rem;font-weight:500;line-height:1.85}
 .v2-scope footer a:hover {color:var(--emerald-500)}
-.v2-scope .fcopy {grid-column:1 / span 3;border-top:1px solid rgba(255,255,255,.2);padding-top:22px;text-align:left;font-size:.86rem;color:rgba(255,255,255,.65)}
+.v2-scope .fcopy {grid-column:1 / span 3;border-top:1px solid rgba(255,255,255,.2);padding-top:22px;text-align:left;font-size:.86rem}
 .v2-scope .rv {opacity:0;transform:translateY(18px);transition:.75s cubic-bezier(.2,.7,.3,1)}
 .v2-scope .rv.in {opacity:1;transform:none}
 
@@ -1223,10 +1229,19 @@ html {scroll-behavior:smooth}
 
 
 .v2-scope .vmv {display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
-.v2-scope .vmv .card {padding:26px 26px;text-align:left}
-.v2-scope .vmv .ic {width:44px;height:44px;border-radius:11px;background:var(--navy-900);color:var(--teal-300);display:grid;place-items:center;margin-bottom:14px}
-.v2-scope .vmv h3 {font-size:1.15rem}
-.v2-scope .vmv p {color:var(--body-text);font-size:.93rem;margin-top:8px;line-height:1.65;font-weight:500}
+/* Values / Vision / Mission cards keep the site's original navy-glass palette
+   rather than the v2 white surface. Selectors carry one extra class so they
+   beat `.v2-scope .card{background:var(--surface)}` above. */
+.v2-scope .vmv .card {padding:26px 26px;text-align:left;
+ background:var(--glassnavy);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+ border:1px solid rgba(46,204,113,.28);border-radius:18px;
+ box-shadow:0 24px 60px -18px rgba(4,20,38,.8),inset 0 1px 0 rgba(255,255,255,.2)}
+.v2-scope .vmv .card:hover {border-color:rgba(46,204,113,.65);
+ box-shadow:0 30px 66px -18px rgba(4,20,38,.85),0 0 0 1px rgba(46,204,113,.3)}
+.v2-scope .vmv .ic {width:44px;height:44px;border-radius:11px;background:rgba(46,204,113,.14);
+ border:1px solid rgba(46,204,113,.3);color:var(--green-l);display:grid;place-items:center;margin-bottom:14px}
+.v2-scope .vmv h3 {font-size:1.15rem;color:#fff}
+.v2-scope .vmv p {color:#c2cfda;font-size:.93rem;margin-top:8px;line-height:1.65;font-weight:500}
 .v2-scope .abgrid {display:grid;grid-template-columns:1.5fr 1fr;gap:34px;align-items:start;margin-top:8px}
 .v2-scope .abgrid .txt p {color:var(--body-text);font-weight:500;line-height:1.85;margin-bottom:14px}
 .v2-scope .leadgrid {display:grid;grid-template-columns:1fr 1fr;gap:22px}
@@ -1247,14 +1262,35 @@ html {scroll-behavior:smooth}
 
 .v2-scope .roadwrap {position:relative;margin:30px 0 34px}
 .v2-scope .roadsvg {width:100%;height:auto;display:block}
-.v2-scope .roadsvg .tar {stroke:var(--line-strong);stroke-width:34;fill:none;stroke-linecap:round}
-.v2-scope .roadsvg .lane {stroke:var(--surface);stroke-width:4;fill:none;stroke-dasharray:16 16;stroke-linecap:round;opacity:.9}
-.v2-scope .roadsvg .stop {fill:#fff;stroke:var(--teal-500);stroke-width:6}
-.v2-scope .roadsvg .stop2 {fill:var(--navy-800)}
-.v2-scope .roadnode {position:absolute;width:220px;transform:translateX(-50%);text-align:center}
-.v2-scope .roadnode .yr {display:inline-block;background:var(--navy-900);color:var(--teal-300);font-weight:700;font-size:.78rem;letter-spacing:.07em;padding:5px 14px;border-radius:999px}
-.v2-scope .roadnode b {display:block;color:var(--ink);font-size:1rem;margin-top:8px;letter-spacing:-.01em}
-.v2-scope .roadnode p {color:var(--body-text);font-weight:500;font-size:.84rem;margin-top:4px;line-height:1.55}
+/* Perspective road. Every part is a FILLED shape generated from offset edges
+   (see scratchpad genroad -> components/JourneyRoad.tsx) so the surface, the
+   edge lines and the centre dashes all taper with distance — a stroke would
+   keep one width and kill the perspective. */
+.v2-scope .roadsvg .rverge {fill:#161c21;transform:translateY(9px);opacity:.55}
+.v2-scope .roadsvg .rtar {fill:url(#jasphalt)}
+.v2-scope .roadsvg .rline {fill:#f2f6f8;opacity:.92}
+.v2-scope .roadsvg .rdash {fill:#f2f6f8;opacity:.85}
+.v2-scope .roadsvg .pshadow {fill:rgba(10,20,26,.34)}
+.v2-scope .roadsvg .pbody {fill:#1d242a}
+.v2-scope .roadsvg .pcap {fill:#eef3f6}
+/* Milestone captions sit in the open space beside their post. Each carries its
+   own colour from the brand ramp — navy at the start of the journey through
+   teal to green at the newest milestone. */
+.v2-scope .roadnode {position:absolute;width:198px;transform:translateX(-50%);text-align:center}
+/* background/padding/radius are reset because the unscoped .roadnode .yr rule
+   above still styles this span as a gradient pill. */
+.v2-scope .roadnode .yr {display:block;font-weight:800;font-size:1.05rem;letter-spacing:.01em;color:inherit;
+ background:none;padding:0;border-radius:0;box-shadow:none}
+.v2-scope .roadnode p {margin-top:3px;font-weight:700;font-size:.85rem;line-height:1.42;color:inherit}
+.v2-scope .roadnode.m2018 {color:#0A3F6E}
+.v2-scope .roadnode.m2019 {color:#0B5F89}
+.v2-scope .roadnode.m2020 {color:#1271A1}
+.v2-scope .roadnode.m2021 {color:#06676B}
+.v2-scope .roadnode.m2022 {color:#077F83}
+.v2-scope .roadnode.m2023 {color:#089BA0}
+.v2-scope .roadnode.m2024 {color:#1B9857}
+.v2-scope .roadnode.m2025 {color:#24BC6E}
+:root[data-theme="dark"] .v2-scope .roadnode {color:#BFD2DE}
 @media(max-width:900px) {.v2-scope .roadwrap {display:none}
 .v2-scope .timeline {display:block !important}
 }
@@ -1392,7 +1428,7 @@ html {scroll-behavior:smooth}
 .v2-scope .ctaddr-map .fmap-cta {display:block;text-align:right;margin-top:10px}
 
 
-.v2-scope .sitefooter {background:var(--teal-500);color:rgba(255,255,255,.92);padding:54px 0 23px}
+.v2-scope .sitefooter {background:linear-gradient(120deg,#083352,#0a4f74 60%,#0c6b6a);color:#cfe6ef;padding:54px 0 23px}
 .v2-scope .sitefooter .fgrid {display:grid;grid-template-columns:1.4fr 1fr 1.5fr 1.3fr;column-gap:36px;row-gap:20px;max-width:1240px;margin:0 auto;padding:0 28px;align-items:start}
 .v2-scope .sitefooter .fgrid > div:nth-child(1) {grid-column:1}
 .v2-scope .sitefooter .fgrid > div:nth-child(2) {grid-column:2}
@@ -1402,7 +1438,7 @@ html {scroll-behavior:smooth}
 .v2-scope .sitefooter p,
 .v2-scope .sitefooter li {font-size:.846rem;font-weight:500;line-height:1.85}
 .v2-scope .sitefooter a:hover {color:var(--emerald-500)}
-.v2-scope .sitefooter .fcopy {grid-column:1 / span 3;max-width:none;margin:0;border-top:1px solid rgba(255,255,255,.2);padding-top:20px;text-align:left;font-size:.77rem;color:rgba(255,255,255,.65)}
+.v2-scope .sitefooter .fcopy {grid-column:1 / span 3;max-width:none;margin:0;border-top:1px solid rgba(255,255,255,.2);padding-top:20px;text-align:left;font-size:.77rem}
 @media(max-width:1000px) {.v2-scope .prgrid {grid-template-columns:1fr 1fr}
 .v2-scope .sdbody,
 .v2-scope .ctgrid {grid-template-columns:1fr}
@@ -1517,9 +1553,9 @@ html {scroll-behavior:smooth}
   position:relative;transform:rotate(-45deg);box-shadow:0 2px 6px -1px rgba(0,0,0,.45)}
 .v2-scope .fmap-dot::before {content:"";position:absolute;top:50%;left:50%;width:4px;height:4px;border-radius:50%;background:#fff;transform:translate(-50%,-50%)}
 .v2-scope .fmap-pin b {font-size:.62rem;font-weight:700;color:#fff;white-space:nowrap;letter-spacing:-.01em;margin-bottom:1px}
-.v2-scope .fmap-cta {display:inline-block;margin-top:8px;font-size:.86rem;font-weight:700;color:#B9C8D6;transition:.2s}
+.v2-scope .fmap-cta {display:inline-block;margin-top:8px;font-size:.86rem;font-weight:700;color:#cfe6ef;transition:.2s}
 .v2-scope .fmap:hover .fmap-in img {opacity:.8}
-.v2-scope .fmap:hover .fmap-cta {color:var(--teal-300)}
+.v2-scope .fmap:hover .fmap-cta {color:var(--green-l)}
 .v2-scope .fmap:hover .fmap-dot {background:#fff;border-color:var(--red-500)}
 .v2-scope .fmap:hover .fmap-dot::before {background:var(--red-500)}
 

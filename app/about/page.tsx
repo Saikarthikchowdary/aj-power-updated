@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import JourneyRoad from "@/components/JourneyRoad";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -19,25 +20,16 @@ export default function AboutPage() {
         </div>
 
         <h2 className="secthead">Our Journey</h2>
-        <div className="roadwrap">
-          <svg className="roadsvg" viewBox="0 0 1000 520" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path className="tar" d="M 70 380 C 200 380 240 180 380 180 C 520 180 540 380 660 380 C 780 380 820 200 930 190" />
-            <path className="lane" d="M 70 380 C 200 380 240 180 380 180 C 520 180 540 380 660 380 C 780 380 820 200 930 190" />
-            <circle className="stop" cx="70" cy="380" r="15" /><circle className="stop2" cx="70" cy="380" r="6" />
-            <circle className="stop" cx="380" cy="180" r="15" /><circle className="stop2" cx="380" cy="180" r="6" />
-            <circle className="stop" cx="660" cy="380" r="15" /><circle className="stop2" cx="660" cy="380" r="6" />
-            <circle className="stop" cx="930" cy="190" r="15" /><circle className="stop2" cx="930" cy="190" r="6" />
-          </svg>
-          <div className="roadnode" style={{ left: "7%", top: "40%" }}><span className="yr">2018</span><b>Founded in Hyderabad</b><p>Two young professional minds with a vision for best-in-class electrical services.</p></div>
-          <div className="roadnode" style={{ left: "38%", top: "6%" }}><span className="yr">2020</span><b>Pune Branch</b><p>Expanding delivery across Maharashtra.</p></div>
-          <div className="roadnode" style={{ left: "66%", top: "40%" }}><span className="yr">2021</span><b>Bengaluru Branch</b><p>Serving projects across Karnataka.</p></div>
-          <div className="roadnode" style={{ left: "93%", top: "4%" }}><span className="yr">Today</span><b>250+ Projects · 13M+ Sq Ft</b><p>₹49 Cr group turnover · 24/7 service.</p></div>
-        </div>
+        <JourneyRoad />
         <div className="timeline">
-          <div className="tl"><span>2018</span><b>Founded in Hyderabad</b><p>Two young professional minds with a vision for best-in-class electrical services.</p></div>
-          <div className="tl"><span>2020</span><b>Pune branch</b><p>Expanding delivery across Maharashtra.</p></div>
-          <div className="tl"><span>2021</span><b>Bengaluru branch</b><p>Serving projects across Karnataka.</p></div>
-          <div className="tl"><span>Today</span><b>250+ projects · 13M+ sq ft</b><p>₹49 Cr group turnover with a 24/7 service department.</p></div>
+          <div className="tl"><span>2018</span><b>AJ Power Solutions founded</b><p>The journey started in Hyderabad.</p></div>
+          <div className="tl"><span>2019</span><b>Emerging journey</b><p>Continued building the team and our delivery track record.</p></div>
+          <div className="tl"><span>2020</span><b>Pune office</b><p>New office set up in Pune, Maharashtra.</p></div>
+          <div className="tl"><span>2021</span><b>Bengaluru expansion</b><p>Expanded to Bangalore, Karnataka.</p></div>
+          <div className="tl"><span>2022</span><b>Tech Pi Solutions</b><p>Started our LT panel manufacturing unit.</p></div>
+          <div className="tl"><span>2023</span><b>Raceway &amp; cable tray unit</b><p>Established our raceway and cable tray manufacturing unit.</p></div>
+          <div className="tl"><span>2024</span><b>10+ million sq ft</b><p>Completed over 10 million sq ft of built area.</p></div>
+          <div className="tl"><span>2025</span><b>250+ projects</b><p>Successfully delivered more than 250 projects.</p></div>
         </div>
 
         <h2 className="secthead">Values · Vision · Mission</h2>
