@@ -14,7 +14,7 @@ export const SERVICES: Service[] = [
     no: "01",
     t: "Design & Engineering",
     // user-supplied: electrical schematic with terminal block and pliers
-    img: "/images/services/design.jpg",
+    img: "/images/services/service-1.jpg",
     s: "Site-specific design, load planning and compliance documentation.",
     d: [
       "Our in-house Design, Engineering, Estimation, Documentation and Procurement teams work in tandem from the core of the project to produce detailed pre-construction, Good-for-Construction and coordination drawings.",
@@ -24,7 +24,7 @@ export const SERVICES: Service[] = [
       "Detailed designing & estimation",
       "Load planning & value engineering",
       "GFC & coordination drawings",
-      "CEIG / Board liaisoning",
+      "Statutory approvals / Board liaisoning",
       "Compliance documentation",
     ],
   },
@@ -34,7 +34,7 @@ export const SERVICES: Service[] = [
     t: "HT & LT Works",
     // row of LT/HT switchgear panels - matches "HT & LT panel installation" and
     // "power distribution systems"
-    img: "https://images.unsplash.com/photo-1604251806132-6b149e8e6730?auto=format&fit=crop&w=1600&q=85",
+    img: "/images/services/service-2.jpg",
     s: "High- and low-tension panels, distribution and electrification at any scale.",
     d: [
       "We have the ability and expertise across the entire HT and LT electrical system — panels, distribution and complete electrification for projects of any scale.",
@@ -72,7 +72,7 @@ export const SERVICES: Service[] = [
     no: "04",
     t: "Lighting Management",
     // user-supplied: commercial lobby with an integrated recessed/linear lighting scheme
-    img: "/images/services/lighting.webp",
+    img: "/images/services/service-4.jpg",
     s: "Lighting systems designed for efficiency and control.",
     d: [
       "AJ Power Solutions has a dedicated design team providing the latest light-fixture details according to project requirements, along with complete lighting design calculations.",
@@ -91,16 +91,16 @@ export const SERVICES: Service[] = [
     no: "05",
     t: "Testing & Commissioning",
     // user-supplied: engineer using a clamp meter to test live panel contactors
-    img: "/images/services/testing.jpg",
-    s: "Testing, commissioning and CEIG / Board liaisoning end to end.",
+    img: "/images/services/service-5.jpg",
+    s: "Testing, commissioning and statutory approvals / Board liaisoning end to end.",
     d: [
-      "Comprehensive testing, commissioning and certification for electrical installations — handled end to end including all liaisoning works related to Electricity CEIG / Board.",
+      "Comprehensive testing, commissioning and certification for electrical installations — handled end to end including all liaisoning works related to statutory approvals and the Electricity Board.",
       "Dedicated EHS and QC teams ensure every installation is verified, certified and handed over safely.",
     ],
     k: [
       "Installation testing",
       "Commissioning & certification",
-      "CEIG / Board liaisoning",
+      "Statutory approvals / Board liaisoning",
       "EHS & QC verification",
       "Safe handover",
     ],

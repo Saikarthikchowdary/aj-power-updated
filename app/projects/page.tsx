@@ -22,7 +22,7 @@ export default function ProjectsPage() {
         <div className="pjfeat">
           <div>
             <h3>Trusted by leading enterprises — repeatedly</h3>
-            <p>Major HT &amp; LT electrification delivered for marquee clients across India — and it&apos;s the repeat orders that define us. Multi-phase campus programmes, follow-on packages and sustained engagements executed alongside leading PMCs.</p>
+            <p>Major HT &amp; LT electrification delivered for marquee clients across India — and it&apos;s the repeat orders that define us. Multi-phase campus programmes, follow-on packages and sustained engagements executed alongside leading PMCs, architects and clients.</p>
           </div>
           <div className="big">25+<small>REPEAT-ORDER CLIENTS</small></div>
         </div>

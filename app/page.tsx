@@ -12,8 +12,8 @@ export default function HomePage() {
       <section className="hero slideframe" id="top">
         <HeroWall />
         <div className="glass">
-          <div className="bname">AJ Power Solutions</div>
-          <h1>Empowering India&rsquo;s Infrastructure with Specialized HT &amp; LT Electrification</h1>
+          <div className="bname caps">AJ Power Solutions</div>
+          <h1 className="caps">Empowering India&rsquo;s Infrastructure with Specialized HT &amp; LT Electrification</h1>
           <p style={{ marginTop: 20 }}>
             Specialized Electrical Contractors and Engineers — delivering design, execution, testing and 24/7
             maintenance across IT parks, data centres, industries and hospitals.
@@ -21,7 +21,6 @@ export default function HomePage() {
           <div className="acts">
             <Link className="btn btn-g" href="/services">Explore Services</Link>
             <Link className="btn btn-w" href="/contact">Get in Touch</Link>
-            <Link className="btn btn-w" href="/admin/login">Admin Login</Link>
           </div>
           <div className="soc">
             <a href="https://www.linkedin.com/in/aj-power-solutions-a887b316b/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
@@ -47,7 +46,7 @@ export default function HomePage() {
 
           <div className="glass rv" style={{ maxWidth: 820, padding: "24px 36px", marginTop: 28 }}>
             <div className="kicker">Trusted by industry leaders</div>
-            <h2>Delivering excellence <span style={{ color: "var(--green-l)" }}>nationwide.</span></h2>
+            <h2 className="caps">Delivering excellence <span style={{ color: "var(--green-l)" }}>nationwide.</span></h2>
             <div className="rule" style={{ margin: "12px auto 0" }}></div>
           </div>
 
@@ -59,7 +58,7 @@ export default function HomePage() {
         <div className="pinsec-content" id="why">
           <div className="glass rv" style={{ maxWidth: 860, padding: "26px 36px" }}>
             <div className="kicker">Why Choose Us</div>
-            <h2>Experience Excellence with <span style={{ color: "var(--green-l)" }}>AJ Power Solutions</span></h2>
+            <h2 className="caps">Experience Excellence with <span style={{ color: "var(--green-l)" }}>AJ Power Solutions</span></h2>
             <div className="rule" style={{ margin: "12px auto 0" }}></div>
           </div>
           <div className="cards">
@@ -69,7 +68,7 @@ export default function HomePage() {
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" /><path d="M9 12l2 2 4-4" /></svg>
               </div>
               <h3>Quality Excellence</h3>
-              <p>In-house design and engineering with value engineering from concept to CEIG approval, ensuring superior quality on every project.</p>
+              <p>In-house design and engineering with value engineering from concept to statutory approval, ensuring superior quality on every project.</p>
             </div>
             <div className="whycard rv">
               <span className="num">WHY US · 02</span>
@@ -77,7 +76,7 @@ export default function HomePage() {
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="7" r="4" /><path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" /><path d="M17 3.5a4 4 0 0 1 0 7.5" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /></svg>
               </div>
               <h3>Expert Leadership</h3>
-              <p>Directors with over two decades each in HT &amp; LT contracting, collaborating with JLL, CBRE, Savills, RSP and Semac.</p>
+              <p>Directors with two decades of experience in HT &amp; LT contracting, collaborating with architects, clients, industry leaders, JLL, CBRE, Savills, RSP and Semac.</p>
             </div>
             <div className="whycard rv">
               <span className="num">WHY US · 03</span>
@@ -93,7 +92,7 @@ export default function HomePage() {
         <div className="pinsec-content" id="services">
           <div className="glass rv" style={{ maxWidth: 800, padding: "24px 36px" }}>
             <div className="kicker">Services</div>
-            <h2>Our <span style={{ color: "var(--green-l)" }}>Services</span></h2>
+            <h2 className="caps">Our <span style={{ color: "var(--green-l)" }}>Services</span></h2>
           </div>
           <div className="svgrid">
             {SERVICES.map((s) => (
@@ -120,7 +119,7 @@ export default function HomePage() {
           <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=85" alt="Earth city lights at night" />
         </div>
         <div className="glass rv">
-          <h2>Transform Your Electrical Infrastructure</h2>
+          <h2 className="caps">Transform Your Electrical Infrastructure</h2>
           <div className="rule"></div>
           <p>Partner with us for HT &amp; LT electrification that adds economical value to your business while meeting the highest safety and quality standards.</p>
           <div className="acts"><Link className="btn btn-g" href="/contact">Start Your Project</Link></div>

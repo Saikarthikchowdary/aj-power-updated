@@ -1687,3 +1687,8 @@ html {scroll-behavior:smooth}
    links with the page body colour, so restore the white the base nav uses.
    =========================================================================== */
 .v2-scope .navlinks a{color:#fff}
+
+/* Uppercased headings on the home page. Done with text-transform rather than
+   by shouting in the markup so the DOM keeps its natural casing — screen
+   readers spell out literal all-caps, and the source stays readable. */
+.caps{text-transform:uppercase}
