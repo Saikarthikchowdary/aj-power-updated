@@ -9,16 +9,16 @@ export const metadata: Metadata = {
     template: "%s — AJ Power Solutions",
   },
   description:
-    "AJ Power Solutions — Specialized HT & LT electrical contractors and engineers in South India. 13M+ sq ft executed, 250+ projects delivered. Hyderabad · Bengaluru · Pune.",
+    "AJ Power Solutions — Specialized HT & LT electrical contractors and engineers across India. 13M+ sq ft executed, 250+ projects delivered. Hyderabad · Bengaluru · Pune.",
   keywords: [
     "electrical contractors Hyderabad", "HT LT contractors",
-    "electrical engineers South India", "internal electrification",
+    "electrical engineers across India", "internal electrification",
     "testing commissioning", "AJ Power Solutions",
   ],
   openGraph: {
     type: "website",
     title: "AJ Power Solutions — Specialized HT & LT Electrical Contractors",
-    description: "Specialized Electrical Contractors and Engineers — 13M+ sq ft executed, 250+ projects across South India.",
+    description: "Specialized Electrical Contractors and Engineers — 13M+ sq ft executed, 250+ projects across India.",
     url: "https://ajpowersolutions.com",
     images: ["/images/logo-icon.webp"],
   },
@@ -29,7 +29,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "AJ Power Solutions",
-  description: "Specialized HT & LT electrical contractors and engineers in South India.",
+  description: "Specialized HT & LT electrical contractors and engineers across India.",
   url: "https://ajpowersolutions.com",
   email: "hyd@ajpowersolutions.com",
   telephone: ["+918197496989", "+917032901979"],
@@ -41,7 +41,7 @@ const jsonLd = {
   },
   geo: { "@type": "GeoCoordinates", latitude: 17.47619548342618, longitude: 78.32354577522358 },
   foundingDate: "2018",
-  areaServed: ["Hyderabad", "Bengaluru", "Pune", "South India"],
+  areaServed: ["Hyderabad", "Bengaluru", "Pune", "India"],
   sameAs: [
     "https://www.linkedin.com/in/aj-power-solutions-a887b316b/",
     "https://www.facebook.com/ajpowersolutions/",

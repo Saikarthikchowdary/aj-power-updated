@@ -13,7 +13,7 @@ export default function HomePage() {
         <HeroWall />
         <div className="glass">
           <div className="bname">AJ Power Solutions</div>
-          <h1>Empowering South India&rsquo;s Infrastructure with Specialized HT &amp; LT Electrification</h1>
+          <h1>Empowering India&rsquo;s Infrastructure with Specialized HT &amp; LT Electrification</h1>
           <p style={{ marginTop: 20 }}>
             Specialized Electrical Contractors and Engineers — delivering design, execution, testing and 24/7
             maintenance across IT parks, data centres, industries and hospitals.
@@ -34,14 +34,14 @@ export default function HomePage() {
       <section className="pinsec">
         <div className="pinsec-bg">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="https://images.unsplash.com/photo-1509390673020-a5b2450e33f1?auto=format&fit=crop&w=2400&q=90" alt="Electrical substation at sunset" />
+          <img src="/images/pinsec-bg.jpg" alt="Transmission towers against a bright blue sky" />
         </div>
 
         <div className="pinsec-content" id="clients">
           <div className="statbar rv" role="group" aria-label="Company statistics">
             <div className="s"><div className="n"><CountUp to={13} /><span className="u">M+</span></div><div className="l">Sq Ft Executed</div></div>
+            <div className="s"><div className="n"><CountUp to={25} /><span className="u">+</span></div><div className="l">Marquee Clients</div></div>
             <div className="s"><div className="n"><CountUp to={250} /><span className="u">+</span></div><div className="l">Projects Delivered</div></div>
-            <div className="s"><div className="n">₹<CountUp to={49} /><span className="u">Cr</span></div><div className="l">Group Turnover</div></div>
             <div className="s"><div className="n"><CountUp to={100} /><span className="u">%</span></div><div className="l">Satisfaction Focus</div></div>
           </div>
 

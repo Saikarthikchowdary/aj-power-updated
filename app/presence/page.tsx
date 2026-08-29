@@ -3,7 +3,7 @@ import PresenceMap from "@/components/PresenceMap";
 
 export const metadata: Metadata = {
   title: "Our Presence",
-  description: "Head office in Hyderabad with branches in Bengaluru and Pune — delivering HT & LT projects across South India.",
+  description: "Head office in Hyderabad with branches in Bengaluru and Pune — delivering HT & LT projects across India.",
   alternates: { canonical: "/presence" },
 };
 
@@ -14,7 +14,7 @@ export default function PresencePage() {
         <PresenceMap />
         <div className="covermap" style={{ marginTop: 40 }}>
           <div>
-            <h3>Delivering across South India — and beyond.</h3>
+            <h3>Delivering across India — and beyond.</h3>
             <p>From our Hyderabad head office and regional branches, our teams execute HT &amp; LT projects for IT parks, data centres, industries and hospitals — backed by a 24/7 service department.</p>
             <ul>
               <li>Telangana · Andhra Pradesh · Karnataka · Tamil Nadu · Maharashtra</li>

@@ -13,7 +13,7 @@ export default function AboutPage() {
       <div className="litepage aboutpage"><div className="inwrap">
         <div className="abgrid" style={{ gridTemplateColumns: "1fr" }}>
           <div className="txt">
-            <p><b>AJ POWER SOLUTIONS</b> is a leader in every aspect of electrical construction, maintenance and service — one of the reputed specialized HT &amp; LT electrical contractors in South India for commercial, industrial, residential and IT sectors, equipped to handle the challenges and complexities of any job.</p>
+            <p><b>AJ POWER SOLUTIONS</b> is a leader in every aspect of electrical construction, maintenance and service — one of the reputed specialized HT &amp; LT electrical contractors across India for commercial, industrial, residential and IT sectors, equipped to handle the challenges and complexities of any job.</p>
             <p>We bring a dedication to safety, integrity and dependability to every job. Integrity, honesty, perseverance, respect and service — these are the true values embraced by each and every AJ Power Solutions employee. Our projects can be complex, but our ethics are not.</p>
             <p>Founded with the philosophy of <b>&quot;PEOPLE ARE OUR STRENGTH&quot;</b>, we are a growing, innovative company committed to quality service — building relationships that provide complete satisfaction and lead to lifetime partnerships.</p>
           </div>
@@ -22,14 +22,14 @@ export default function AboutPage() {
         <h2 className="secthead">Our Journey</h2>
         <JourneyRoad />
         <div className="timeline">
-          <div className="tl"><span>2018</span><b>AJ Power Solutions founded</b><p>The journey started in Hyderabad.</p></div>
-          <div className="tl"><span>2019</span><b>Emerging journey</b><p>Continued building the team and our delivery track record.</p></div>
-          <div className="tl"><span>2020</span><b>Pune office</b><p>New office set up in Pune, Maharashtra.</p></div>
+          <div className="tl"><span>2018</span><b>AJ Power Solutions founded</b><p>AJ Power Solutions journey started.</p></div>
+          <div className="tl"><span>2019</span><b>Emerging journey</b><p>Continued our emerging journey.</p></div>
+          <div className="tl"><span>2020</span><b>Pune office</b><p>New office set up at Pune, Maharashtra.</p></div>
           <div className="tl"><span>2021</span><b>Bengaluru expansion</b><p>Expanded to Bangalore, Karnataka.</p></div>
-          <div className="tl"><span>2022</span><b>Tech Pi Solutions</b><p>Started our LT panel manufacturing unit.</p></div>
-          <div className="tl"><span>2023</span><b>Raceway &amp; cable tray unit</b><p>Established our raceway and cable tray manufacturing unit.</p></div>
-          <div className="tl"><span>2024</span><b>10+ million sq ft</b><p>Completed over 10 million sq ft of built area.</p></div>
-          <div className="tl"><span>Present</span><b>250+ projects</b><p>250+ projects delivered and counting.</p></div>
+          <div className="tl"><span>2022</span><b>Tech Pi Solutions</b><p>Started visionary LT panel manufacturing unit, Tech Pi Solutions.</p></div>
+          <div className="tl"><span>2023</span><b>Raceway &amp; cable tray unit</b><p>Established raceway and cable tray manufacturing unit.</p></div>
+          <div className="tl"><span>2024</span><b>10+ million sq ft</b><p>Successfully completed 10+ million sq ft area.</p></div>
+          <div className="tl"><span>Present</span><b>250+ projects</b><p>Successfully completed 250+ projects.</p></div>
         </div>
 
         <h2 className="secthead">Values · Vision · Mission</h2>
@@ -44,7 +44,7 @@ export default function AboutPage() {
             <div className="ic" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="3.2" /><path d="M12 3v3M12 18v3M3 12h3M18 12h3" /></svg>
             </div>
-            <h3>Our Vision</h3><p>To provide interesting and challenging projects to empower — building South India&apos;s infrastructure.</p>
+            <h3>Our Vision</h3><p>To provide interesting and challenging projects to empower — building India&apos;s infrastructure.</p>
           </div>
           <div className="card">
             <div className="ic" aria-hidden="true">

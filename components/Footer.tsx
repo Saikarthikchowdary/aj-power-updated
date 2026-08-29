@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="fgrid">
         <div>
           <h4>AJ Power Solutions</h4>
-          <p>Specialized Electrical Contractors and Engineers — HT &amp; LT electrification across South India.</p>
+          <p>Specialized Electrical Contractors and Engineers — HT &amp; LT electrification across India.</p>
           <div className="soc" style={{ justifyContent: "flex-start", marginTop: 18 }}>
             <a href="https://www.linkedin.com/in/aj-power-solutions-a887b316b/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
             <a href="mailto:hyd@ajpowersolutions.com" aria-label="Email">✉</a>

@@ -283,6 +283,11 @@ section .wrap,section .stack{width:100%}
   .hero .glass{max-height:none}
 }
 @media(max-width:720px){
+  /* Phone hero is the scrolling image wall alone — the glass panel is removed
+     outright, as asked. Note this takes the page's <h1> off the mobile render,
+     and Google indexes mobile-first, so the headline no longer counts for
+     search; the copy still ships in the HTML for desktop. */
+  .hero .glass{display:none}
   .navlinks{position:fixed;inset:90px 0 auto 0;background:var(--navy);flex-direction:column;align-items:stretch;padding:12px 20px 20px;transform:translateY(-180%);transition:.3s;box-shadow:0 12px 24px rgba(0,0,0,.3);z-index:79}
   .navlinks.open{transform:none}
   .navlinks a{padding:15px}
@@ -869,7 +874,12 @@ html {scroll-behavior:smooth}
   background:var(--bg);
   line-height:1.65;
   -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
+  /* MUST be `clip`, not `hidden`. overflow-x:hidden resolves overflow-y to
+     `auto`, which makes this wrapper a scroll container — and the sticky
+     <header> inside then sticks to THIS box rather than the viewport, so it
+     scrolled away on every page except home (home renders unwrapped). `clip`
+     does the same visual job without establishing a scroll container. */
+  overflow-x:clip;
 }
 .v2-scope h1,
 .v2-scope h2,
@@ -1262,10 +1272,10 @@ html {scroll-behavior:smooth}
 
 /* container-type lets the caption type scale with the drawing: the SVG is
    fluid, so fixed px would swell out of its column on a narrow desktop. */
-.v2-scope .roadwrap {position:relative;margin:30px 0 34px;container-type:inline-size}
+.v2-scope .roadwrap {position:relative;margin:2px 0 34px;container-type:inline-size}
 .v2-scope .roadsvg {width:100%;height:auto;display:block}
 /* Perspective road. Every part is a FILLED shape generated from offset edges
-   (see scratchpad genroad -> components/JourneyRoad.tsx) so the surface, the
+   (see scripts/genroad.mjs -> components/JourneyRoad.tsx) so the surface, the
    edge lines and the centre dashes all taper with distance — a stroke would
    keep one width and kill the perspective. */
 .v2-scope .roadsvg .rverge {fill:#161c21;opacity:.55}
@@ -1275,6 +1285,7 @@ html {scroll-behavior:smooth}
 .v2-scope .roadsvg .pshadow {fill:rgba(10,20,26,.34)}
 .v2-scope .roadsvg .pbody {fill:#1d242a}
 .v2-scope .roadsvg .pcap {fill:#eef3f6}
+.v2-scope .roadsvg .pband {fill:#9fadb7}
 /* Leader lines. The rule is drawn behind the asphalt and the dot on top of it,
    so a caption reaching across the frame is still tied to one exact point. Both
    take their colour from the milestone class on their own <g>. */
@@ -1289,9 +1300,9 @@ html {scroll-behavior:smooth}
    vertically centred on the head of its own bollard. Colours run along the
    brand ramp — navy at the start of the journey through teal to green at the
    newest milestone — and are shared with that milestone's leader. */
-.v2-scope .roadnode {position:absolute;width:19cqw;max-width:232px}
-.v2-scope .roadnode.side-l {transform:translate(-100%,-50%);text-align:right}
-.v2-scope .roadnode.side-r {transform:translateY(-50%);text-align:left}
+.v2-scope .roadnode {position:absolute;width:15.6cqw;max-width:250px;text-align:center}
+.v2-scope .roadnode.side-t {transform:translate(-50%,-100%)}
+.v2-scope .roadnode.side-b {transform:translate(-50%,0)}
 /* background/padding/radius are reset because the unscoped .roadnode .yr rule
    above still styles this span as a gradient pill. */
 .v2-scope .roadnode .yr {display:block;font-weight:800;font-size:max(13px,1.45cqw);

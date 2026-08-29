@@ -140,7 +140,7 @@ const CUST = "https://tech-pi-website.vercel.app/images/customers/";
 export const PROJECTS: Project[] = [
   { name: "Qualcomm", sector: "Semiconductor", desc: "Multi-phase campus electrification across Hyderabad facilities.", count: 25, logo: CUST + "qualcomm.png" },
   { name: "JLL (PMC)", sector: "Project Management", desc: "Fit-out and base-build electrical works delivered under JLL programs.", count: 17, logo: "/images/clients/jll.svg" },
-  { name: "Savills (PMC)", sector: "Project Management", desc: "Commercial interior electrification packages across South India.", count: 9, logo: "/images/clients/savills.svg" },
+  { name: "Savills (PMC)", sector: "Project Management", desc: "Commercial interior electrification packages across India.", count: 9, logo: "/images/clients/savills.svg" },
   { name: "Sutherland", sector: "IT / BPO", desc: "Campus electrical works including HT distribution.", count: 9, logo: "/images/clients/sutherland.png" },
   { name: "DivyaSree", sector: "Realty", desc: "Base-build and tenant electrification across developments.", count: 8, logo: null },
   { name: "Verizon", sector: "Telecom", desc: "Office and technical-space electrification programs.", count: 7, logo: CUST + "verizon.png" },
