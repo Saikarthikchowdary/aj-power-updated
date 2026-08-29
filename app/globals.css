@@ -1260,37 +1260,56 @@ html {scroll-behavior:smooth}
 .v2-scope .tl p {color:var(--body-text);font-weight:500;font-size:.91rem;margin-top:4px}
 
 
-.v2-scope .roadwrap {position:relative;margin:30px 0 34px}
+/* container-type lets the caption type scale with the drawing: the SVG is
+   fluid, so fixed px would swell out of its column on a narrow desktop. */
+.v2-scope .roadwrap {position:relative;margin:30px 0 34px;container-type:inline-size}
 .v2-scope .roadsvg {width:100%;height:auto;display:block}
 /* Perspective road. Every part is a FILLED shape generated from offset edges
    (see scratchpad genroad -> components/JourneyRoad.tsx) so the surface, the
    edge lines and the centre dashes all taper with distance — a stroke would
    keep one width and kill the perspective. */
-.v2-scope .roadsvg .rverge {fill:#161c21;transform:translateY(9px);opacity:.55}
+.v2-scope .roadsvg .rverge {fill:#161c21;opacity:.55}
 .v2-scope .roadsvg .rtar {fill:url(#jasphalt)}
 .v2-scope .roadsvg .rline {fill:#f2f6f8;opacity:.92}
 .v2-scope .roadsvg .rdash {fill:#f2f6f8;opacity:.85}
 .v2-scope .roadsvg .pshadow {fill:rgba(10,20,26,.34)}
 .v2-scope .roadsvg .pbody {fill:#1d242a}
 .v2-scope .roadsvg .pcap {fill:#eef3f6}
-/* Milestone captions sit in the open space beside their post. Each carries its
-   own colour from the brand ramp — navy at the start of the journey through
-   teal to green at the newest milestone. */
-.v2-scope .roadnode {position:absolute;width:198px;transform:translateX(-50%);text-align:center}
+/* Leader lines. The rule is drawn behind the asphalt and the dot on top of it,
+   so a caption reaching across the frame is still tied to one exact point. Both
+   take their colour from the milestone class on their own <g>. */
+.v2-scope .roadsvg .leadline path {fill:none;stroke:currentColor;stroke-width:1.7;
+ stroke-dasharray:5 5;stroke-linecap:round;opacity:.5}
+.v2-scope .roadsvg .leaddot circle {fill:currentColor;stroke:#fff;stroke-width:1.7}
+/* the same rule again, clipped to the asphalt, so a leader crossing the road
+   stays unbroken instead of disappearing under it. */
+.v2-scope .roadsvg .leadover path {fill:none;stroke:#e3edf2;stroke-width:1.7;
+ stroke-dasharray:5 5;stroke-linecap:round;opacity:.4}
+/* Milestone captions sit in two columns, one either side of the road, each one
+   vertically centred on the head of its own bollard. Colours run along the
+   brand ramp — navy at the start of the journey through teal to green at the
+   newest milestone — and are shared with that milestone's leader. */
+.v2-scope .roadnode {position:absolute;width:19cqw;max-width:232px}
+.v2-scope .roadnode.side-l {transform:translate(-100%,-50%);text-align:right}
+.v2-scope .roadnode.side-r {transform:translateY(-50%);text-align:left}
 /* background/padding/radius are reset because the unscoped .roadnode .yr rule
    above still styles this span as a gradient pill. */
-.v2-scope .roadnode .yr {display:block;font-weight:800;font-size:1.05rem;letter-spacing:.01em;color:inherit;
+.v2-scope .roadnode .yr {display:block;font-weight:800;font-size:max(13px,1.45cqw);
+ letter-spacing:.01em;line-height:1.2;color:inherit;
  background:none;padding:0;border-radius:0;box-shadow:none}
-.v2-scope .roadnode p {margin-top:3px;font-weight:700;font-size:.85rem;line-height:1.42;color:inherit}
-.v2-scope .roadnode.m2018 {color:#0A3F6E}
-.v2-scope .roadnode.m2019 {color:#0B5F89}
-.v2-scope .roadnode.m2020 {color:#1271A1}
-.v2-scope .roadnode.m2021 {color:#06676B}
-.v2-scope .roadnode.m2022 {color:#077F83}
-.v2-scope .roadnode.m2023 {color:#089BA0}
-.v2-scope .roadnode.m2024 {color:#1B9857}
-.v2-scope .roadnode.m2025 {color:#24BC6E}
-:root[data-theme="dark"] .v2-scope .roadnode {color:#BFD2DE}
+.v2-scope .roadnode p {margin-top:2px;font-weight:700;font-size:max(11px,1.18cqw);
+ line-height:1.4;color:inherit}
+.v2-scope .m2018 {color:#0A3F6E}
+.v2-scope .m2019 {color:#0B5F89}
+.v2-scope .m2020 {color:#1271A1}
+.v2-scope .m2021 {color:#06676B}
+.v2-scope .m2022 {color:#077F83}
+.v2-scope .m2023 {color:#089BA0}
+.v2-scope .m2024 {color:#1B9857}
+.v2-scope .mnow {color:#24BC6E}
+:root[data-theme="dark"] .v2-scope .roadnode,
+:root[data-theme="dark"] .v2-scope .roadsvg .leadline,
+:root[data-theme="dark"] .v2-scope .roadsvg .leaddot {color:#BFD2DE}
 @media(max-width:900px) {.v2-scope .roadwrap {display:none}
 .v2-scope .timeline {display:block !important}
 }

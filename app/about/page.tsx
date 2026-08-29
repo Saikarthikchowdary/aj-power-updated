@@ -29,7 +29,7 @@ export default function AboutPage() {
           <div className="tl"><span>2022</span><b>Tech Pi Solutions</b><p>Started our LT panel manufacturing unit.</p></div>
           <div className="tl"><span>2023</span><b>Raceway &amp; cable tray unit</b><p>Established our raceway and cable tray manufacturing unit.</p></div>
           <div className="tl"><span>2024</span><b>10+ million sq ft</b><p>Completed over 10 million sq ft of built area.</p></div>
-          <div className="tl"><span>2025</span><b>250+ projects</b><p>Successfully delivered more than 250 projects.</p></div>
+          <div className="tl"><span>Present</span><b>250+ projects</b><p>250+ projects delivered and counting.</p></div>
         </div>
 
         <h2 className="secthead">Values · Vision · Mission</h2>
